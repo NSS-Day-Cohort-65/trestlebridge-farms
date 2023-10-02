@@ -4,13 +4,12 @@ using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Animals 
 {
-    public class Cow : IResource, IGrazing, IMeatProducing 
+    public class Pig : IResource, IGrazing, IMeatProducing
     {
-
         private Guid _id = Guid.NewGuid();
-        private double _meatProduced = 18.25;
-        public double GrassPerDay { get; set; } = 5.4;
-        public string Type { get; } = "Cow";
+        private double _meatProduced = 8.4;
+        public double GrassPerDay { get; set; } = 3.2;
+        public string Type { get; } = "Pig";
         private string _shortId 
         {
             get 
@@ -19,21 +18,22 @@ namespace Trestlebridge.Models.Animals
             }
         }
 
-        
+
         // Methods
-        public void Graze () 
+        public void Graze ()
         {
-            Console.WriteLine($"Cow {this._shortId} just ate {this.GrassPerDay}kg of grass");
+            Console.WriteLine($"Pig {this._shortId} just ate {this.GrassPerDay}kg of grass");
         }
 
-        public double Butcher () 
+        public double Butcher ()
         {
             return _meatProduced;
         }
 
-        public override string ToString () 
+        public override string ToString ()
         {
-            return $"Cow {this._shortId}. Mooo!";
+            return $"Pig {this._shortId}. Oink!";
         }
     }
+    
 }
