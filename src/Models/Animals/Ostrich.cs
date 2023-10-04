@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Animals {
-    public class Ostrich : IResource, IGrazing, IMeatProducing, IEggProducing 
+    public class Ostrich : IResource, IGrazing, IEggProducing, IMeatProducing
     {
 
         private Guid _id = Guid.NewGuid();
